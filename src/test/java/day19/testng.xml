@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+ 
+    
+      <groups>
+      <run>
+      <include name="sanity"/> //here we specify which group of test method we have to execute
+      <include name="functional" />
+       <exclude name="regression"/> 
+       
+      </run>
+      </groups> 
+        
+       <classes>
+      <class name="day19.SignupTests"/>
+      <class name="day19.LoginTests"/>
+      <class name="day19.PaymentTests"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
